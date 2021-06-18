@@ -51,6 +51,10 @@ Ajouter une entête au fichier produits.csv, le placer dans "public", puis lance
 
     bin/console app:import-csv produits.csv
     
+Voir la liste des produits (après importation) :
+
+    http://localhost:8001/product/
+    
 Pour accéder au formulaire de création d'un utlisateur, utiliser l'url :
 
     http://localhost:8001/register
