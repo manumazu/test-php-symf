@@ -44,3 +44,14 @@ Installer les dépendances :
 Lancer les tests (attention la base est entièrement reconstruite au moment des tests)
 
     ./vendor/bin/simple-phpunit
+  
+Lancer l'import csv :
+
+Ajouter une entête au fichier produits.csv, le placer dans "public", puis lancer la commande :
+
+    bin/console app:import-csv produits.csv
+    
+Pour accéder au formulaire de création d'un utlisateur, utiliser l'url :
+
+    http://localhost:8001/register
+    
