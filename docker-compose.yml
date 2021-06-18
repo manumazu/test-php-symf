@@ -1,0 +1,24 @@
+version: "3.4"
+
+services:
+  php:
+    build:
+      context: .
+    ports:
+      - "8001:80"
+    working_dir: /app
+    volumes:
+      - ./:/app
+
+  mysql:
+    image: mysql:8
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=recyclivre
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=password
+    command: [ 'mysqld', '--character-set-server=utf8mb4', '--collation-server=utf8mb4_unicode_ci' ]
+    ports:
+      - "3336:3306"
+
+
